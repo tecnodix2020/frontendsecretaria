@@ -19,7 +19,7 @@ const App: () => React$Node = () => {
       <View style={[styles.body]}>
         <View style={[styles.placeholderLogo]}>
             <Image style={styles.imgLogo} source={require('./img/logo.png')}/>
-            <Text style={[styles.txtLogo]}>Clique para iniciar</Text>
+            <Text style={[styles.txtLogo]}>CHAMAR</Text>
         </View>
       </View>
     );
@@ -52,7 +52,8 @@ const styles = StyleSheet.create({
     margin: 20,
   },
   txtLogo: {
-    fontSize: 22,
+    fontSize: 30,
+    color: 'red',
   }
 });
 
