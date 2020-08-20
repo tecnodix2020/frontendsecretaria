@@ -1,19 +1,20 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button, Image } from 'react-native';
+import { StyleSheet, View, Text, Button, Image, TouchableWithoutFeedback } from 'react-native';
 
 export default function Home({ navigation }) {
     
     const pressHandler = () => {
-        navigation.navigate('Option');
+        navigation.navigate('Guest');
     }
 
     return (
       <View style={[styles.body]}>
-        <View style={[styles.placeholderLogo]} >
-          <Image style={styles.imgLogo} source={require('../img/logo.png')}/>
-          <Text style={[styles.txtLogo]}>CHAMAR</Text>
-          <Button title='ir a proxima tela' onPress = {pressHandler} />
-        </View>
+        <TouchableWithoutFeedback onPress={pressHandler} >
+          <View style={[styles.placeholderLogo]}>
+            <Image style={styles.imgLogo} source={require('../img/logo.png')} />
+            <Text style={[styles.txtLogo]}>CHAMAR</Text>
+          </View>
+        </TouchableWithoutFeedback>
       </View>
   )
 }
@@ -32,20 +33,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     flex: 1,
     width: 300,
-    height: 900,
+    height: 300,
+    borderRadius: 300/2,
     justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
-    borderRadius: 150,
-    margin: 300,
+    margin: 260,
   },
   imgLogo: {
-    width: 150,
+    width: 170,
     height: 150,
-    margin: 20,
+    margin: 10,
   },
   txtLogo: {
-    fontSize: 30,
-    color: 'red',
+    fontSize: 40,
+    color: 'black',
   }
 });
