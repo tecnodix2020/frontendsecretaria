@@ -20,7 +20,7 @@ export default function Option({ navigation }) {
           <View style={styles.body}>
               <View style={styles.logoCircle}>
                 <Image style={styles.logoImage} source={require('../img/logo.png')} />
-                <Text>Escolha Uma Das Opções</Text>
+                <Text style={styles.txtCircle}>Escolha Uma Das Opções</Text>
               </View>
               <TouchableWithoutFeedback onPress={pressHandlerGuest} >
                 <View style={styles.circleGuest}>
@@ -48,8 +48,8 @@ export default function Option({ navigation }) {
 
 const styles = StyleSheet.create({
   body: {
-    width: 600,
-    height: 900,
+    width: '100%',
+    height: '100%',
     backgroundColor: '#009FE3',
   },
   logoCircle: {
@@ -61,8 +61,8 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     alignItems: 'center',
     position: 'absolute',
-    left: 170,
-    top: 100,
+    left: '40%',
+    top: '10%',
     backgroundColor: 'white',
     borderWidth: 2,
     borderColor: 'green',
@@ -70,8 +70,7 @@ const styles = StyleSheet.create({
   logoImage: {
     width: 150,
     height: 120,
-    margin: 10,
-    padding: 10,
+    margin: 5,
   },
   circleGuest: {
     width: 150,
@@ -81,8 +80,8 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     alignItems: 'center',
     position: 'absolute',
-    left: 50,
-    top: 330,
+    left: '25%',
+    top: '43%',
     backgroundColor: '#FFFFFF',
     borderWidth: 1,
     borderColor: 'lime',
@@ -95,8 +94,8 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     alignItems: 'center',
     position: 'absolute',
-    left: 220,
-    top: 420,
+    left: '45%',
+    top: '65%',
     backgroundColor: '#FFFFFF',
     borderWidth: 1,
     borderColor: 'blue',
@@ -109,12 +108,14 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     alignItems: 'center',
     position: 'absolute',
-    left: 390,
-    top: 330,
-    right: 50,
+    left: '65%',
+    top: '43%',
     backgroundColor: '#FFFFFF',
     borderWidth: 1,
     borderColor: 'red',
   },
-
+  txtCircle: {
+    fontSize: 16,
+    color: 'red',
+  }
 });

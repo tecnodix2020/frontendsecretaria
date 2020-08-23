@@ -21,19 +21,19 @@ const screens = {
         }
     },
     Guest: {
-        screen: Option,
+        screen: Guest,
         navigationOptions: {
             title: 'VISITA'
-        }
+        },
     },
     Meeting: {
-        screen: Option,
+        screen: Meeting,
         navigationOptions: {
             title: 'REUNIÃO ENTREVISTA'
         }
     },
     Delivery: {
-        screen: Option,
+        screen: Delivery,
         navigationOptions: {
             title: 'ENTREGAS'
         }
@@ -44,7 +44,8 @@ const HomeStack = createStackNavigator(screens, {
     defaultNavigationOptions : {
         headerStyle: {
             backgroundColor: '#009FE3'
-        }
+        },
+        headerShown: false
     }
 });
 

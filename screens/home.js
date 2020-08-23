@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, Button, Image, TouchableWithoutFeedback } from 
 export default function Home({ navigation }) {
     
     const pressHandler = () => {
-        navigation.navigate('Guest');
+        navigation.navigate('Option');
     }
 
     return (
@@ -22,8 +22,8 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
   body: {
     flex: 1,
-    width: 600,
-    height: 900,
+    width: '100%',
+    height: '100%',
     backgroundColor: '#009FE3',
     justifyContent: 'center',
     alignItems: 'center',
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
-    margin: 260,
+    margin: '12%'
   },
   imgLogo: {
     width: 170,
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   txtLogo: {
-    fontSize: 40,
-    color: 'black',
+    fontSize: 35,
+    color: 'red',
   }
 });
