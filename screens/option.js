@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   body: {
     width: '100%',
     height: '100%',
-    backgroundColor: '#009FE3',
+    backgroundColor: '#50C3F3',
   },
   logoCircle: {
     flex: 1,
