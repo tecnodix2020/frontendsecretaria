@@ -5,6 +5,7 @@ import Option from '../screens/option';
 import Guest from '../screens/guest';
 import Meeting from '../screens/meeting';
 import Delivery from '../screens/delivery';
+import Chat from '../screens/chat';
 
 const screens = {
     Home: {
@@ -37,7 +38,13 @@ const screens = {
         navigationOptions: {
             title: 'ENTREGAS'
         }
-    }
+    },
+    Chat: {
+        screen: Chat,
+        navigationOptions: {
+            title: 'CHAT'
+        }
+    },
 }
 
 const HomeStack = createStackNavigator(screens, {

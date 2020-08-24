@@ -1,7 +1,11 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button, Image, TouchableHighlight } from 'react-native';
+import { StyleSheet, View, Text, Button, Image, TouchableWithoutFeedback } from 'react-native';
 
 export default function Delivery({ navigation }) {
+
+    const pressHandler = () => {
+        navigation.navigate('Chat');
+    }
     
     return (
       <View>
@@ -12,23 +16,31 @@ export default function Delivery({ navigation }) {
                 <Text style={styles.txtCircle}>Destinatário</Text>
               </View>
           </View>
-          <View style={styles.userOne}>
-            <Image style={styles.userImage} source={require('../img/user.png')} />
-            <Text style={styles.txtUser}>Ivan Coimbra</Text>
-          </View>
-          <View style={styles.userTwo}>
-            <Image style={styles.userImage} source={require('../img/user.png')} />
-            <Text style={styles.txtUser}>Guilherme Ferreira</Text>
-          </View>
-          <View style={styles.userThree}>
-            <Image style={styles.userImage} source={require('../img/user.png')} />
-            <Text style={styles.txtUser}>Felipe Freitas</Text>
-          </View>
-          <View style={styles.userNotListed}>
-            <Image style={styles.userImage} source={require('../img/exclamation.png')} />
-            <Text style={styles.txtUser}>O Destinatário</Text>
-            <Text style={styles.txtUser}>Não Está Na Lista</Text>
-          </View>
+          <TouchableWithoutFeedback onPress={pressHandler} >
+            <View style={styles.userOne}>
+              <Image style={styles.userImage} source={require('../img/user.png')} />
+              <Text style={styles.txtUser}>Ivan Coimbra</Text>
+            </View>
+          </TouchableWithoutFeedback>
+          <TouchableWithoutFeedback onPress={pressHandler} >
+            <View style={styles.userTwo}>
+              <Image style={styles.userImage} source={require('../img/user.png')} />
+              <Text style={styles.txtUser}>Guilherme Ferreira</Text>
+            </View>
+          </TouchableWithoutFeedback>
+          <TouchableWithoutFeedback onPress={pressHandler} >
+            <View style={styles.userThree}>
+              <Image style={styles.userImage} source={require('../img/user.png')} />
+              <Text style={styles.txtUser}>Felipe Freitas</Text>
+            </View>
+          </TouchableWithoutFeedback>
+          <TouchableWithoutFeedback onPress={pressHandler} >
+            <View style={styles.userNotListed}>
+              <Image style={styles.userImage} source={require('../img/exclamation.png')} />
+              <Text style={styles.txtUser}>O Destinatário</Text>
+              <Text style={styles.txtUser}>Não Está Na Lista</Text>
+            </View>
+          </TouchableWithoutFeedback>
       </View>
   )
 }

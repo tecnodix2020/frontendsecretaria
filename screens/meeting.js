@@ -1,7 +1,11 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button, Image, TouchableHighlight, TextInput } from 'react-native';
+import { StyleSheet, View, Text, Button, Image, TextInput, TouchableWithoutFeedback } from 'react-native';
 
 export default function Meeting({ navigation }) {
+
+    const pressHandler = () => {
+        navigation.navigate('Chat');
+    }
     
     return (
       <View style={styles.body}>
@@ -36,9 +40,11 @@ export default function Meeting({ navigation }) {
             </View>
           </View>
           <View style={styles.support}>
-              <View style={styles.placeholderSupport}>
-                <Text style={styles.name}>Chamar Equipe Gente</Text>
-              </View>
+              <TouchableWithoutFeedback onPress={pressHandler} >
+                <View style={styles.placeholderSupport}>
+                  <Text style={styles.name}>Chamar Equipe Gente</Text>
+                </View>
+              </TouchableWithoutFeedback>
           </View>
         </View>
       </View>

@@ -5,15 +5,16 @@
  * @format
  * @flow strict-local
  */
-import React from 'react';
-
+import React, { Component } from 'react';
 
 import Navigator from './routes/homeStack';
 
-const App: () => React$Node = () => {
-    return (
-      <Navigator />
-    );
+class App extends Component {
+    render() {
+      return (
+        <Navigator />
+      );
+    }
 };
 
 export default App;
