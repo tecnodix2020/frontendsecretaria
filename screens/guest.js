@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
   },
   txtMenu: {
-    fontSize: 22,
+    fontSize: 20,
     color: '#FFFFFF',
     fontWeight: 'bold',
   },
@@ -91,8 +91,8 @@ const styles = StyleSheet.create({
     width: '70%',
     height: '70%',
     borderRadius: 30,
-    padding: '5%',
-    margin: '2%',
+    padding: '1%',
+    margin: '1%',
   },
   people: {
     justifyContent: 'center',
@@ -100,16 +100,16 @@ const styles = StyleSheet.create({
     alignContent: 'center',
   },
   txtTop3: {
-    fontSize: 30,
+    fontSize: 20,
     color: '#D5D5D5',
   },
   bodyNames: {
     width: '70%',
     overflow: 'hidden',
-    margin: '0.5%',
+    marginBottom: '0.5%',
   },
   placeholderData: {
-    margin: '1%',
+    margin: '0.5%',
     borderRadius: 30,
     borderWidth: 2.5,
     borderColor: '#D5D5D5',
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: '30%',
     paddingTop: '2%',
-    fontSize: 16,
+    fontSize: 14,
   },
   placeholderSupport: {
     borderWidth: 2.5,
