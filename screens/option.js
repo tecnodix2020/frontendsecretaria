@@ -1,5 +1,22 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button, Image, TouchableWithoutFeedback } from 'react-native';
+import { PixelRatio, Dimensions, StyleSheet, View, Text, Button, Image, TouchableWithoutFeedback } from 'react-native';
+
+var FONT = 16;
+var BALL_SIZE_LOGO = Dimensions.get('window').width * 0.26;
+var BALL_SIZE_OPTIONS = Dimensions.get('window').width * 0.175;
+
+if (PixelRatio.get() <= 2.5) {
+  FONT = 12;
+  BALL_SIZE_LOGO = Dimensions.get('window').width * 0.25;
+  BALL_SIZE_OPTIONS = Dimensions.get('window').width * 0.175;
+} 
+
+if (PixelRatio.get() <= 1.5) {
+  FONT = 9;
+  BALL_SIZE_LOGO = Dimensions.get('window').width * 0.25;
+  BALL_SIZE_OPTIONS = Dimensions.get('window').width * 0.175;
+}
+
 
 export default function Option({ navigation }) {
 
@@ -25,20 +42,20 @@ export default function Option({ navigation }) {
               <TouchableWithoutFeedback onPress={pressHandlerGuest} >
                 <View style={styles.circleGuest}>
                   <Image source={require('../img/guest.png')} />
-                  <Text>VISITA</Text>
+                  <Text style={styles.txtOptions}>VISITA</Text>
                 </View>
               </TouchableWithoutFeedback>
               <TouchableWithoutFeedback onPress={pressHandlerMeeting} >
                 <View style={styles.circleMeeting}>
                   <Image source={require('../img/meeting.png')} />
-                  <Text>REUNIÃO</Text>
-                  <Text>ENTREVISTA</Text>
+                  <Text style={styles.txtOptions}>REUNIÃO</Text>
+                  <Text style={styles.txtOptions}>ENTREVISTA</Text>
                 </View>
               </TouchableWithoutFeedback>
               <TouchableWithoutFeedback onPress={pressHandlerDelivery} >
                 <View style={styles.circleDelivery}>
                   <Image source={require('../img/delivery.png')} />
-                  <Text>ENTREGAS</Text>
+                  <Text style={styles.txtOptions}>ENTREGAS</Text>
                 </View>
               </TouchableWithoutFeedback>
           </View>
@@ -53,10 +70,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#50C3F3',
   },
   logoCircle: {
-    flex: 1,
-    width: 250,
-    height: 250,
-    borderRadius: 250/2,
+    width: BALL_SIZE_LOGO,
+    height: BALL_SIZE_LOGO,
+    borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
@@ -64,18 +80,19 @@ const styles = StyleSheet.create({
     left: '40%',
     top: '10%',
     backgroundColor: 'white',
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: 'green',
   },
   logoImage: {
-    width: 150,
-    height: 120,
-    margin: 5,
+    width: '60%',
+    height: '50%',
+    marginBottom: 4,
+    resizeMode: 'stretch',
   },
   circleGuest: {
-    width: 150,
-    height: 150,
-    borderRadius: 150/2,
+    width: BALL_SIZE_OPTIONS,
+    height: BALL_SIZE_OPTIONS,
+    borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
@@ -87,35 +104,39 @@ const styles = StyleSheet.create({
     borderColor: 'lime',
   },
   circleMeeting: {
-    width: 150,
-    height: 150,
-    borderRadius: 150/2,
+    width: BALL_SIZE_OPTIONS,
+    height: BALL_SIZE_OPTIONS,
+    borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
     position: 'absolute',
     left: '45%',
-    top: '65%',
+    top: '64%',
     backgroundColor: '#FFFFFF',
     borderWidth: 1,
     borderColor: 'blue',
   },
   circleDelivery: {
-    width: 150,
-    height: 150,
-    borderRadius: 150/2,
+    width: BALL_SIZE_OPTIONS,
+    height: BALL_SIZE_OPTIONS,
+    borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
     position: 'absolute',
-    left: '65%',
+    left: '63%',
     top: '43%',
     backgroundColor: '#FFFFFF',
     borderWidth: 1,
     borderColor: 'red',
   },
   txtCircle: {
-    fontSize: 16,
+    fontSize: FONT,
     color: 'red',
+  },
+  txtOptions: {
+    fontSize: FONT,
+    color: 'black',
   }
 });

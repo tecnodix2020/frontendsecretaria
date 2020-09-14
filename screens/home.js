@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   imgLogo: {
     width: '60%',
     height: '50%',
-    margin: 10,
+    marginBottom: 10,
     resizeMode: 'stretch',
   },
   txtLogo: {
