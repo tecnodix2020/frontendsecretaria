@@ -11,7 +11,7 @@ export default function Meeting({ navigation }) {
       <View style={styles.body}>
         <View style={styles.square}>
           <View style={styles.menu}>
-            <Text style={styles.txtMenu}>Informe seu código de visitante ou a pessoa com quem vais se reunir</Text>
+            <Text style={styles.txtMenu}>Selecione ou digite o nome da pessoa com quem irá reunir</Text>
           </View>
           <View style={styles.search}>
             <TextInput
@@ -75,19 +75,19 @@ const styles = StyleSheet.create({
     alignContent: 'center',
   },
   txtMenu: {
-    fontSize: 20,
+    fontSize: 16,
     color: '#FFFFFF',
     fontWeight: 'bold',
-    paddingLeft: '3%',
   },
   search: {
     height: '20%',
+    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
   },
   support: {
-    height: '20%',
+    height: '18%',
     justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
@@ -95,11 +95,10 @@ const styles = StyleSheet.create({
   inpTxtSearch: {
     borderWidth: 2.5,
     borderColor: '#009FE3',
-    width: '70%',
+    width: '80%',
     height: '70%',
     borderRadius: 30,
-    padding: '5%',
-    margin: '2%',
+    margin: '1%',
   },
   people: {
     justifyContent: 'center',
@@ -107,16 +106,16 @@ const styles = StyleSheet.create({
     alignContent: 'center',
   },
   txtTop3: {
-    fontSize: 30,
+    fontSize: 18,
     color: '#D5D5D5',
   },
   bodyNames: {
     width: '70%',
     overflow: 'hidden',
-    margin: '0.5%',
+    marginBottom: '0.5%',
   },
   placeholderData: {
-    margin: '1%',
+    margin: '0.5%',
     borderRadius: 30,
     borderWidth: 2.5,
     borderColor: '#D5D5D5',
@@ -127,22 +126,21 @@ const styles = StyleSheet.create({
   },
   position: {
     position: 'absolute',
-    left: '5%',
+    left: '2%',
     paddingTop: '15%',
     borderWidth: 2.5,
     borderColor: '#009FE3',
-    borderRadius: 30/2,
-    height: 30,
-    width: 30,
+    borderRadius: 25/2,
+    height: 25,
+    width: 25,
     color: '#009FE3',
     paddingLeft: '35%',
-    
   },
   name: {
     position: 'absolute',
     left: '30%',
     paddingTop: '2%',
-    fontSize: 16,
+    fontSize: 9,
   },
   placeholderSupport: {
     borderWidth: 2.5,

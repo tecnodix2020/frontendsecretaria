@@ -7,7 +7,7 @@ export default function Guest({ navigation }) {
       <View style={styles.body}>
         <View style={styles.square}>
           <View style={styles.menu}>
-            <Text style={styles.txtMenu}>Informe quem você deseja visitar</Text>
+            <Text style={styles.txtMenu}>Indique o nome</Text>
           </View>
           <View style={styles.search}>
             <TextInput
@@ -75,12 +75,13 @@ const styles = StyleSheet.create({
   },
   search: {
     height: '20%',
+    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
   },
   support: {
-    height: '20%',
+    height: '18%',
     justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
@@ -88,10 +89,9 @@ const styles = StyleSheet.create({
   inpTxtSearch: {
     borderWidth: 2.5,
     borderColor: '#009FE3',
-    width: '70%',
+    width: '80%',
     height: '70%',
     borderRadius: 30,
-    padding: '1%',
     margin: '1%',
   },
   people: {
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
   },
   txtTop3: {
-    fontSize: 20,
+    fontSize: 18,
     color: '#D5D5D5',
   },
   bodyNames: {
@@ -120,22 +120,21 @@ const styles = StyleSheet.create({
   },
   position: {
     position: 'absolute',
-    left: '5%',
+    left: '2%',
     paddingTop: '15%',
     borderWidth: 2.5,
     borderColor: '#009FE3',
-    borderRadius: 30/2,
-    height: 30,
-    width: 30,
+    borderRadius: 25/2,
+    height: 25,
+    width: 25,
     color: '#009FE3',
     paddingLeft: '35%',
-    
   },
   name: {
     position: 'absolute',
     left: '30%',
     paddingTop: '2%',
-    fontSize: 14,
+    fontSize: 9,
   },
   placeholderSupport: {
     borderWidth: 2.5,

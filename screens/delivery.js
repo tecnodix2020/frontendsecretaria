@@ -1,5 +1,7 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button, Image, TouchableWithoutFeedback } from 'react-native';
+import { Dimensions, StyleSheet, View, Text, Button, Image, TouchableWithoutFeedback } from 'react-native';
+
+var OPTIONS = Dimensions.get('window').width * 0.25;
 
 export default function Delivery({ navigation }) {
 
@@ -37,8 +39,7 @@ export default function Delivery({ navigation }) {
           <TouchableWithoutFeedback onPress={pressHandler} >
             <View style={styles.userNotListed}>
               <Image style={styles.userImage} source={require('../img/exclamation.png')} />
-              <Text style={styles.txtUser}>O Destinatário</Text>
-              <Text style={styles.txtUser}>Não Está Na Lista</Text>
+              <Text style={styles.txtUser}>Outro Nome</Text>
             </View>
           </TouchableWithoutFeedback>
       </View>
@@ -52,72 +53,72 @@ const styles = StyleSheet.create ({
     backgroundColor: '#50C3F3',
   },
   logoCircle: {
-    flex: 1,
-    width: 200,
-    height: 200,
-    borderRadius: 200/2,
+    width: Dimensions.get('window').width * 0.29,
+    height: Dimensions.get('window').width * 0.29,
+    borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
     position: 'absolute',
     left: '40%',
-    top: '15%',
+    top: '7%',
     backgroundColor: 'white',
     borderWidth: 2,
     borderColor: 'green',
   },
   logoImage: {
-    width: 120,
-    height: 110,
-    margin: 1,
+    width: '60%',
+    height: '50%',
+    marginBottom: 6,
+    resizeMode: 'stretch',
   },
   txtCircle: {
-    fontSize: 16,
+    fontSize: 12,
     color: 'red',
   },
   userOne: {
-    width: 150,
-    height: 150,
-    borderRadius: 150/2,
+    width: OPTIONS,
+    height: OPTIONS,
+    borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
     position: 'absolute',
-    left: '25%',
-    top: '43%',
+    left: '21%',
+    top: '35%',
   },
   userTwo: {
-    width: 150,
-    height: 150,
-    borderRadius: 150/2,
+    width: OPTIONS,
+    height: OPTIONS,
+    borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
     position: 'absolute',
-    left: '43%',
-    top: '60%',
+    left: '41%',
+    top: '53%',
   },
   userThree: {
-    width: 150,
-    height: 150,
-    borderRadius: 150/2,
+    width: OPTIONS,
+    height: OPTIONS,
+    borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
     position: 'absolute',
-    left: '60%',
-    top: '43%',
+    left: '62%',
+    top: '35%',
   },
   userNotListed: {
-    width: 180,
-    height: 180,
-    borderRadius: 180/2,
+    width: OPTIONS,
+    height: OPTIONS,
+    borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
     position: 'absolute',
     left: '75%',
-    top: '30%',
+    top: '5%',
   },
   txtUser: {
     color: '#FFFFFF',

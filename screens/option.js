@@ -5,14 +5,14 @@ var FONT = 16;
 var BALL_SIZE_LOGO = Dimensions.get('window').width * 0.26;
 var BALL_SIZE_OPTIONS = Dimensions.get('window').width * 0.175;
 
-if (PixelRatio.get() <= 2.5) {
-  FONT = 12;
+if (PixelRatio.get() <= 2) {
+  FONT = 9;
   BALL_SIZE_LOGO = Dimensions.get('window').width * 0.25;
   BALL_SIZE_OPTIONS = Dimensions.get('window').width * 0.175;
 } 
 
 if (PixelRatio.get() <= 1.5) {
-  FONT = 9;
+  FONT = 6;
   BALL_SIZE_LOGO = Dimensions.get('window').width * 0.25;
   BALL_SIZE_OPTIONS = Dimensions.get('window').width * 0.175;
 }

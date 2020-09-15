@@ -7,6 +7,10 @@ if (PixelRatio.get() <= 1.5) {
   FONT_LOGO = 18;
 }
 
+if (PixelRatio.get() <= 2) {
+  FONT_LOGO = 20;
+}
+
 
 
 export default function Home({ navigation }) {
@@ -23,6 +27,9 @@ export default function Home({ navigation }) {
             <Text style={[styles.txtLogo]}>CHAMAR</Text>
           </View>
         </TouchableWithoutFeedback>
+
+        <Text>{PixelRatio.getFontScale()}</Text>
+        <Text>{PixelRatio.get()} </Text>
       </View>
   )
 }
@@ -52,7 +59,7 @@ const styles = StyleSheet.create({
     resizeMode: 'stretch',
   },
   txtLogo: {
-    fontSize: FONT_LOGO,
+    fontSize: FONT_LOGO / PixelRatio.getFontScale(),
     color: 'red',
   }
 });
