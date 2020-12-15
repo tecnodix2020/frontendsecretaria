@@ -1,21 +1,13 @@
 import React from 'react';
 import { PixelRatio, Dimensions, StyleSheet, View, Text, Button, Image, TouchableWithoutFeedback } from 'react-native';
+import {
+ heightPercentageToDP as hp,
+ widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
 
-var FONT = 16;
+var FONT = wp(1.66);
 var BALL_SIZE_LOGO = Dimensions.get('window').width * 0.26;
 var BALL_SIZE_OPTIONS = Dimensions.get('window').width * 0.175;
-
-if (PixelRatio.get() <= 2) {
-  FONT = 9;
-  BALL_SIZE_LOGO = Dimensions.get('window').width * 0.25;
-  BALL_SIZE_OPTIONS = Dimensions.get('window').width * 0.175;
-} 
-
-if (PixelRatio.get() <= 1.5) {
-  FONT = 6;
-  BALL_SIZE_LOGO = Dimensions.get('window').width * 0.25;
-  BALL_SIZE_OPTIONS = Dimensions.get('window').width * 0.175;
-}
 
 
 export default function Option({ navigation }) {
@@ -37,24 +29,24 @@ export default function Option({ navigation }) {
           <View style={styles.body}>
               <View style={styles.logoCircle}>
                 <Image style={styles.logoImage} source={require('../img/logo.png')} />
-                <Text style={styles.txtCircle}>Escolha Uma Das Opções</Text>
+                <Text style={styles.txtCircle}>Escolha Uma Opção</Text>
               </View>
               <TouchableWithoutFeedback onPress={pressHandlerGuest} >
                 <View style={styles.circleGuest}>
-                  <Image source={require('../img/guest.png')} />
+                  <Image style={styles.imgIcons} source={require('../img/guest.png')} />
                   <Text style={styles.txtOptions}>VISITA</Text>
                 </View>
               </TouchableWithoutFeedback>
               <TouchableWithoutFeedback onPress={pressHandlerMeeting} >
                 <View style={styles.circleMeeting}>
-                  <Image source={require('../img/meeting.png')} />
+                  <Image style={styles.imgIcons} source={require('../img/meeting.png')} />
                   <Text style={styles.txtOptions}>REUNIÃO</Text>
                   <Text style={styles.txtOptions}>ENTREVISTA</Text>
                 </View>
               </TouchableWithoutFeedback>
               <TouchableWithoutFeedback onPress={pressHandlerDelivery} >
                 <View style={styles.circleDelivery}>
-                  <Image source={require('../img/delivery.png')} />
+                  <Image style={styles.imgIcons} source={require('../img/delivery.png')} />
                   <Text style={styles.txtOptions}>ENTREGAS</Text>
                 </View>
               </TouchableWithoutFeedback>
@@ -84,10 +76,9 @@ const styles = StyleSheet.create({
     borderColor: 'green',
   },
   logoImage: {
-    width: '60%',
-    height: '50%',
-    marginBottom: 4,
-    resizeMode: 'stretch',
+    width: wp(16),
+    height: wp(13),
+    marginBottom: wp(1),
   },
   circleGuest: {
     width: BALL_SIZE_OPTIONS,
@@ -97,7 +88,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     alignItems: 'center',
     position: 'absolute',
-    left: '25%',
+    left: '22%',
     top: '43%',
     backgroundColor: '#FFFFFF',
     borderWidth: 1,
@@ -111,8 +102,8 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     alignItems: 'center',
     position: 'absolute',
-    left: '45%',
-    top: '64%',
+    left: '44%',
+    top: '60%',
     backgroundColor: '#FFFFFF',
     borderWidth: 1,
     borderColor: 'blue',
@@ -125,18 +116,26 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     alignItems: 'center',
     position: 'absolute',
-    left: '63%',
+    left: '65%',
     top: '43%',
     backgroundColor: '#FFFFFF',
     borderWidth: 1,
     borderColor: 'red',
   },
   txtCircle: {
-    fontSize: FONT,
-    color: 'red',
+    fontSize: wp(1.5),
+    color: 'purple',
+    textTransform: "uppercase",
+    fontWeight: "bold",
   },
   txtOptions: {
     fontSize: FONT,
-    color: 'black',
+    color: 'grey',
+    textTransform: "uppercase",
+    fontWeight: "bold",
+  },
+  imgIcons: {
+    width: wp(10),
+    height: wp(7.5),
   }
 });
