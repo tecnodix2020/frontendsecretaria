@@ -9,15 +9,12 @@ export default class Chat extends Component {
       <View style={[styles.body]}>
           <View style={[styles.placeholderLogo]}>
             <Image style={styles.imgLogo} source={require('../img/logo.png')} />
-            <Text style={[styles.txtLogo]}>msg ....</Text>
           </View>
-          <View style={styles.user}>
-            <Image style={styles.userImage} source={require('../img/user.png')} />
-            <Text style={styles.txtUser}>Chamando ...</Text>
-          </View>
+
           <View style={styles.employeeList}>
-            <EmployeeList />
+            
           </View>
+          <Text style={styles.txtUser}>Olá! Já estou indo até a portaria</Text>
       </View>
     );
   }
@@ -67,12 +64,15 @@ const styles = StyleSheet.create({
     top: '55%',
   },
   txtUser: {
-      fontSize: 18,
+      fontSize: 26,
       color: '#FFFFFF',
+      position: 'absolute',
+      top: '75%',
+      left: '25%',
   },
   employeeList: {
     position: 'absolute',
-    left: '70%',
-    top: '20%',
+    left: '86%',
+    top: '17%',
   }
 });
