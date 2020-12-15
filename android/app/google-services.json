@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "639761941313",
+    "project_id": "totem-93489",
+    "storage_bucket": "totem-93489.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639761941313:android:fa9a83528022f6ef4497c0",
+        "android_client_info": {
+          "package_name": "com.secretariavirtualtotem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "639761941313-si5o5pp2ir2kf01numabn48954pf7m3e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.secretariavirtualtotem",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXyNxr_GEIRZpaqn7Mhx4ijMYfCgsVs3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
