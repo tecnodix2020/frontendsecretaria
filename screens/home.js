@@ -1,16 +1,11 @@
 import React from 'react';
 import { PixelRatio, Dimensions, StyleSheet, View, Text, Button, Image, TouchableWithoutFeedback } from 'react-native';
+import {
+ heightPercentageToDP as hp,
+ widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
 
-var FONT_LOGO = 26;
-
-if (PixelRatio.get() <= 1.5) {
-  FONT_LOGO = 18;
-}
-
-if (PixelRatio.get() <= 2) {
-  FONT_LOGO = 20;
-}
-
+var FONT_LOGO = wp(25);
 
 
 export default function Home({ navigation }) {
@@ -27,9 +22,6 @@ export default function Home({ navigation }) {
             <Text style={[styles.txtLogo]}>CHAMAR</Text>
           </View>
         </TouchableWithoutFeedback>
-
-        <Text>{PixelRatio.getFontScale()}</Text>
-        <Text>{PixelRatio.get()} </Text>
       </View>
   )
 }
@@ -46,20 +38,20 @@ const styles = StyleSheet.create({
   },
   placeholderLogo: {
     backgroundColor: '#FFFFFF',
-    width: Dimensions.get('window').width * 0.32,
-    height: Dimensions.get('window').width * 0.32,
+    width: Dimensions.get('window').width * 0.30,
+    height: Dimensions.get('window').width * 0.30,
     borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
     justifyContent: 'center',
     alignItems: 'center',
   },
   imgLogo: {
-    width: '60%',
-    height: '50%',
-    marginBottom: 10,
-    resizeMode: 'stretch',
+    width: wp(19),
+    height: wp(15),
+    margin: wp(1),
+    alignSelf: 'center',
   },
   txtLogo: {
-    fontSize: FONT_LOGO / PixelRatio.getFontScale(),
-    color: 'red',
+    fontSize: wp(3.8),
+    color: 'purple',
   }
 });

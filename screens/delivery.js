@@ -1,5 +1,9 @@
 import React from 'react';
 import { Dimensions, StyleSheet, View, Text, Button, Image, TouchableWithoutFeedback } from 'react-native';
+import {
+ heightPercentageToDP as hp,
+ widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
 
 var OPTIONS = Dimensions.get('window').width * 0.25;
 
@@ -67,14 +71,19 @@ const styles = StyleSheet.create ({
     borderColor: 'green',
   },
   logoImage: {
-    width: '60%',
-    height: '50%',
-    marginBottom: 6,
-    resizeMode: 'stretch',
+    width: wp(16),
+    height: wp(13),
+    marginBottom: wp(1),
+  },
+  userImage: {
+    width: wp(12),
+    height: wp(12),
   },
   txtCircle: {
-    fontSize: 12,
-    color: 'red',
+    fontSize: wp(2),
+    color: 'purple',
+    textTransform: "uppercase",
+    fontWeight: "bold",
   },
   userOne: {
     width: OPTIONS,
@@ -122,6 +131,8 @@ const styles = StyleSheet.create ({
   },
   txtUser: {
     color: '#FFFFFF',
-    fontSize: 18,
+    fontSize: wp(2),
+    textTransform: "uppercase",
+    fontWeight: "bold",
   }
 });
