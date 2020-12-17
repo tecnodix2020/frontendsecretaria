@@ -54,6 +54,7 @@ export default class Employee extends Component {
                 style={styles.pickerStyle}
                 onValueChange={ (value) => ( this.setState({selectedEmployee : value}), this.sendData(value))}>
                 { this.employeeList() }
+
             </Picker>
     );
   }
@@ -61,9 +62,9 @@ export default class Employee extends Component {
 
 const styles = StyleSheet.create({
   pickerStyle: {
-    width: '80%',
+    width: '60%',
     marginLeft: '2%',
-    fontSize: wp(40),
+    transform: [{ scaleX: 1.7 }, { scaleY: 1.7 }]
   },
 });
 
