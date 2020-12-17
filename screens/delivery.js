@@ -10,7 +10,11 @@ var OPTIONS = Dimensions.get('window').width * 0.25;
 export default function Delivery({ navigation }) {
 
     const pressHandler = () => {
-        navigation.navigate('Chat');
+      navigation.navigate('Chat');
+    }
+
+    const pressHandlerAnotherName = () => {
+      navigation.navigate('Meeting');
     }
     
     return (
@@ -40,7 +44,7 @@ export default function Delivery({ navigation }) {
               <Text style={styles.txtUser}>Felipe Freitas</Text>
             </View>
           </TouchableWithoutFeedback>
-          <TouchableWithoutFeedback onPress={pressHandler} >
+          <TouchableWithoutFeedback onPress={pressHandlerAnotherName} >
             <View style={styles.userNotListed}>
               <Image style={styles.userImage} source={require('../img/exclamation.png')} />
               <Text style={styles.txtUser}>Outro Nome</Text>

@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, Button, Image, TouchableWithoutFeedback, FlatList, SafeAreaView } from 'react-native';
+import {
+ heightPercentageToDP as hp,
+ widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
 
 import {Picker} from '@react-native-picker/picker';
 
@@ -40,7 +44,7 @@ export default class Employee extends Component {
 
   employeeList =  () => {
     return( this.state.data.map( (data,i) => { 
-        return( <Picker.Item label={data.name} key={i} value={data.name} color="#4c319e" />)} ));
+        return( <Picker.Item label={data.name} key={i} value={data.id} color="#4c319e" fontSize="40px"/>)} ));
   }
 
   render() {
@@ -50,6 +54,7 @@ export default class Employee extends Component {
                 style={styles.pickerStyle}
                 onValueChange={ (value) => ( this.setState({selectedEmployee : value}), this.sendData(value))}>
                 { this.employeeList() }
+
             </Picker>
     );
   }
@@ -57,8 +62,9 @@ export default class Employee extends Component {
 
 const styles = StyleSheet.create({
   pickerStyle: {
-    width: '80%',
+    width: '60%',
     marginLeft: '2%',
+    transform: [{ scaleX: 1.7 }, { scaleY: 1.7 }]
   },
 });
 
@@ -136,4 +142,28 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
 });
+
+ 
+ searchFilterFunction = text => {    
+  const newData = this.arrayholder.filter(item => {      
+      const itemData = `${item.name.title.toUpperCase()}   
+      ${item.name.first.toUpperCase()} ${item.name.last.toUpperCase()}`;
+      
+      const textData = text.toUpperCase();
+        
+      return itemData.indexOf(textData) > -1;    
+    });
+  
+    this.setState({ data: newData });  
+  };  
+              <SearchBar        
+              placeholder="Pesquise Aqui"        
+              lightTheme        
+              round        
+              onChangeText={text => this.searchFilterFunction(text)}
+              autoCorrect={false}             
+            />  
+  </View>
+
+
 */
