@@ -17,7 +17,7 @@ export default function Option({ navigation }) {
     }
 
     const pressHandlerMeeting = () => {
-        navigation.navigate('Meeting');
+        navigation.navigate('Meetings');
     }
 
     const pressHandlerDelivery = () => {

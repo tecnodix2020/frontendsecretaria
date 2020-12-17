@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, Button, Image, TouchableWithoutFeedback, FlatList, SafeAreaView } from 'react-native';
+import { Dimensions, StyleSheet, View, Text, Button, Image, TouchableWithoutFeedback, FlatList, SafeAreaView } from 'react-native';
+import {
+ heightPercentageToDP as hp,
+ widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
 
 export default class Chat extends Component {
 
@@ -13,7 +17,7 @@ export default class Chat extends Component {
           <View style={styles.employeeList}>
             
           </View>
-          <Text style={styles.txtUser}>Olá! Já estou indo até a portaria</Text>
+          <Text style={styles.txtUser}>O Colaborador está sendo acionado, aguarde a resposta</Text>
       </View>
     );
   }
@@ -31,9 +35,9 @@ const styles = StyleSheet.create({
   },
   placeholderLogo: {
     flex: 1,
-    width: 200,
-    height: 200,
-    borderRadius: 200/2,
+    width: Dimensions.get('window').width * 0.25,
+    height: Dimensions.get('window').width * 0.25,
+    borderRadius: (Dimensions.get('window').width * 0.25 + Dimensions.get('window').height * 0.25)/2,
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
@@ -44,9 +48,9 @@ const styles = StyleSheet.create({
     borderWidth: 2,
   },
   imgLogo: {
-    width: 120,
-    height: 100,
-    margin: 10,
+    width: wp(18),
+    height: wp(16),
+    margin: wp(1),
   },
   txtLogo: {
     fontSize: 20,
@@ -63,11 +67,13 @@ const styles = StyleSheet.create({
     top: '55%',
   },
   txtUser: {
-      fontSize: 26,
-      color: '#FFFFFF',
-      position: 'absolute',
-      top: '75%',
-      left: '25%',
+    fontSize: wp(2.3),
+    color: '#FFFFFF',
+    position: 'absolute',
+    top: '70%',
+    left: '15%',
+    textTransform: "uppercase",
+    fontWeight: "bold",
   },
   employeeList: {
     position: 'absolute',

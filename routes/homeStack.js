@@ -4,6 +4,7 @@ import Home from '../screens/home';
 import Option from '../screens/option';
 import Guest from '../screens/guest';
 import Meeting from '../screens/meeting';
+import Meetings from '../screens/meetings';
 import Delivery from '../screens/delivery';
 import Chat from '../screens/chat';
 
@@ -29,6 +30,12 @@ const screens = {
     },
     Meeting: {
         screen: Meeting,
+        navigationOptions: {
+            title: 'CHAT FINAL'
+        }
+    },
+    Meetings: {
+        screen: Meetings,
         navigationOptions: {
             title: 'REUNIÃO ENTREVISTA'
         }

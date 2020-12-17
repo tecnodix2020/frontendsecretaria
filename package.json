@@ -12,10 +12,11 @@
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.13.2",
     "@react-native-community/masked-view": "^0.1.10",
-    "@react-native-picker/picker": "^1.9.4",
     "@react-native-firebase/app": "^10.2.0",
     "@react-native-firebase/messaging": "^10.2.0",
+    "@react-native-picker/picker": "^1.9.4",
     "axios": "^0.21.0",
+    "date-fns": "^2.16.1",
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-gesture-handler": "^1.7.0",
